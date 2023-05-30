@@ -1,0 +1,179 @@
+
+
+.bottom-left {
+    position: absolute;
+    /* bottom: 100px; */
+    left: 70px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+    margin-right: 500px;
+
+}
+
+.bottom-right{
+    position: absolute;
+    /* bottom: 100px; */
+    right: 70px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+    margin-left: 500px;
+}
+
+h3{
+    color: green;
+    font-size: 35px;
+    text-decoration: b;
+}
+
+.card {
+    margin-top: 0px;
+   height: 400px;
+   width: 300px;
+    position: relative;
+    border-radius: 12%;
+  }
+
+.card:hover{
+    background-color: rgb(59, 182, 59);
+  }
+
+
+.image{
+    height:400px; 
+    width:300px ; 
+    border-radius: 25px; 
+
+}
+
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  
+.text{
+    color: white;
+    font-size: 16px;
+    padding: 1px 2px;
+}
+
+
+.card:hover .image {
+    opacity: 0.1;
+  }  
+
+.card:hover .middle {
+    opacity: 1;
+
+  }
+
+
+  .card-1{
+    margin-top: 0px;
+   height: 350px;
+    position: relative;
+    border-radius: 3%;
+    background-color: rgb(135, 225, 96);
+  }
+
+  
+.card-1:hover{
+  background-color: white
+}
+
+
+.card-2{
+  background-color:rgb(241, 253, 253);
+  border-color: white;
+  border-radius:5%;
+  transition: transform 1s;
+
+}
+
+.card-2:hover{
+  box-shadow: 2px 2px 4px 3px rgb(166, 164, 164);
+  background-color: white;
+  transform: scale(1.01);
+}
+
+.card-2:hover h5{
+  color: green;
+}
+
+
+
+.scrolheading{
+  text-align: center;
+ padding-top: 40px;
+ padding-bottom: 50px;
+ font-size: 30px;
+} 
+.scroll {
+  margin: auto;
+  /* width: 1900px; */
+  /* overflow: visible; */
+  margin-top: 40px;
+  overflow-x: hidden;
+ padding-bottom: 50px;
+}
+
+.scroll ul {
+  padding: 0;
+  display: flex;
+  border-radius: 10px;
+  animation: scroll 60s infinite linear;
+}
+
+.scroll ul:hover {
+  animation-play-state: paused;
+}
+
+.scroll li {
+  margin: 0 10px;
+  list-style: none;
+  /* position: relative; */
+  border-radius: 10px;
+}
+
+
+
+.scroll .scrolimg:hover {
+  transform: scale(1.1);
+}
+.scroll .scrolimg{
+  background-color: white;
+  height: 180px;
+  width: 180px;
+  margin: 15px;
+  /* border-radius: 10px; */
+  text-align: center;
+  /* box-shadow:  0px 5px 10px 0px black;  */
+}
+.scrolimg img {
+ height: 150px;
+ width: 150px;
+  cursor: pointer;
+  transition: 0.2s;
+  /* position: relative; */
+  max-width: fit-content;
+  padding-top: 40px;
+}
+
+@keyframes scroll {
+  from {
+      margin-left: 0%
+  }
+
+  to {
+      margin-left: -100%
+  }
+}

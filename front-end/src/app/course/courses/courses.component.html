@@ -1,0 +1,51 @@
+
+<!-- part-1 -->
+<div class="mt-3 mb-5">
+    <img src="https://www.opinta.io/static/0c8e24462e807d20f5a569392b6ff139/8dbcc/10-tips-for-more-effective-studying.jpg" alt="">
+    <div class="bottom-left">
+        <h2 class="text-success fw-bold  fs-1">Best Data Science,Big Data Courses</h2>
+        <h4 class="text-success fw-bold mt-5  fs-3">SkillMentor | Kochi,Kerala</h4>
+        <p class="fw-bold mt-5">SkillMentor, No.1 Software Training Institute offers various Software Courses along with 100% Guaranteed Placement assistance. We provide Big Data Training, Data Science, Python,Mean Stack,Software Testing & many more</p>
+        <button class="btn btn-success mt-5"><a class="text-light" style="text-decoration: none;" routerLink="contact_us">Enquire Now</a></button>
+    </div>
+</div>
+
+<!-- part-2 -->
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6" style=" margin-top: 90px;">
+        <h1 style="color: green; font-family: 'Instrument Serif', serif; font-size: 50px; " class="fw-bold text-center ">Our 100% Job Oriented </h1>
+        <h1 style="color: green; font-family: 'Instrument Serif', serif; font-size: 50px;" class="fw-bold  text-center ">Training Programs </h1>
+        <p class="text-center mt-5 fs-5">We are focused on providing advanced level software training like Big Data Training, Hadoop Training, Data Science Training, Python Training, Machine Learning Training, Selenium Training in Cochin Kerala.</p>
+    </div>
+    <div class="col-3"></div>
+</div>
+
+<!-- part-3 -->
+<div class="mt-5 d-flex justify-content-center">
+    <input (keyup)="search($event)" style="border: none; outline: none; border-bottom: 3px solid #868383;" type="text" class="form-control w-75 " id="exampleFormControlInput1" placeholder="Search Your Course"><span><i class="fa-solid text-success ms-2 fs-2 fa-magnifying-glass"></i></span>
+</div>
+
+
+<!-- part-4 -->
+<div class="row mt-5">
+    <div class="col p-5 container " *ngFor="let course of allcourses | filter : searchTerm : 'course_name' ">
+        <div class="card card-2 container" style="width: 23rem ; height: 620px;">
+            <div class="card-body ">
+                <h3 class=" card-title fw-bold mb-4 ms-4 mt-3 text-success">{{course.course_name}}</h3>
+                <p class="card-text text-left">{{course.course_description}}</p>
+                <h6 class="fw-bold">Next Batch :</h6>
+                <p class="ms-4 mb-0 fw-bold " style="font-size: 17px;" >Calicut :<span style="font-weight: normal;">{{course.next_batch.calicut}}</span></p>
+                <p class="mt-2 ms-4 fw-bold" style="font-size: 17px;">Cochin :<span style="font-weight: normal;">{{course.next_batch.cochin}}</span></p>
+                <h6 class="fw-bold">Duration :</h6>
+                <p class="mt-2 ms-4 " style="font-size: 17px;">{{course.Duration}}</p>
+                <h6 class="fw-bold">Course Fee :</h6>
+                <p class=" ms-4 mb-0 fw-bold" style="font-size: 17px;">Offline :<span style="font-weight: normal;"> {{course.Course_Fee.Offline}} /-</span></p>
+                <p class="mt-2 ms-4 fw-bold" style="font-size: 17px;">Online :<span style="font-weight: normal;"> {{course.Course_Fee.Online}} /-</span></p>
+                <a  routerLink="view-course/{{course.id}}">
+                    <button type="button" class="btn btn-outline-success mt-3" style="border-radius: 36px; border-width: 3px; margin-left: 90px;">View More</button>
+                </a> 
+            </div>
+          </div>
+    </div>
+</div>

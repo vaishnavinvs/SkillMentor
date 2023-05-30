@@ -1,0 +1,132 @@
+
+<!-- part-1 -->
+<div class="mt-3">
+    <div class="row">
+        <div class="col-6 ">
+            <div class=" mt-5 ms-5 ">
+                <h1 style="color: green; font-family: 'Instrument Serif', serif;">{{course.course_name}}</h1>
+                <p class="mt-5 fw-bold fs-3" style="color: rgb(104, 104, 104);">SkillMentor provides best Software Testing Specialist Training with 100% Job Placement assistance. Get trained from industry experts & start your IT career.</p>
+            </div>
+            <div class="mt-5 ms-5">
+                <button class="btn btn-success ms-5" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Register Now</button>
+                        
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="d-flex">
+                                <h1 *ngIf="makePaymentbtnclickedstatus" class="modal-title  fw-bold mt-5 mb-3" style="margin-left: 170px; color: rgb(196, 16, 16); font-family: 'Instrument Serif', serif;" id="staticBackdropLabel">Details</h1>
+                                <h1 *ngIf="!makePaymentbtnclickedstatus" class="modal-title  fw-bold mt-5 mb-3" style="margin-left: 150px; color: green; font-family: 'Instrument Serif', serif;" id="staticBackdropLabel">Registration</h1>
+                                <button (click)="modalClose()" type="button" style="margin-left: 90px;" class="btn-close mt-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                                <form *ngIf="!makePaymentbtnclickedstatus" [formGroup]="registrationForm" (ngSubmit)="registerClicked()">
+                                    <div class="wrapper mb-4">
+                                        <input name="fName" formControlName="fName" type="text" required>
+                                        <label for="fName">First Name</label>
+                                    </div>
+                                    <div class="wrapper mb-4">
+                                        <input name="lName" formControlName="lName" type="text" required>
+                                        <label for="lName">Last Name</label>
+                                    </div>
+                                    <div class="wrapper mb-4">
+                                        <input name="mobile" formControlName="mobile" type="text" required>
+                                        <label for="mobile">Phone Number</label>
+                                    </div>
+                                    <div class="wrapper mb-4">
+                                        <input name="email" formControlName="email" type="email" required>
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-5">
+                                        <button (click)="modalClose()"  type="button" class="btn btn-dark ms-5" data-bs-dismiss="modal">Close</button>
+                                        <input type="submit" value="Register" class="btn btn-success me-5">
+                                    </div>
+                                </form>
+                                
+                                <!-- register details -->
+                                <div *ngIf="makePaymentbtnclickedstatus" class="m-3">
+                                    <h4 class="text-success fw-bold ">Course Name : <p style="margin-left: 70px;" class="text-dark mt-3 mb-3" >{{course.course_name}}</p></h4>
+                                    <h4 class="text-success fw-bold  mb-3">Name : <span class="text-dark" style="font-weight: normal;">{{fName}} {{lName}}</span></h4>
+                                    <h4 class="text-success fw-bold  mb-3">Email : <span class="text-dark" style="font-weight: normal;">{{email}}</span></h4>
+                                    <h4 class="text-success fw-bold  mb-3">Phone Number : <span class="text-dark" style="font-weight: normal;">{{mobile}}</span></h4>
+                                </div>
+                            </div>
+
+                            <!-- payment -->
+                            <div *ngIf="makePaymentbtnclickedstatus" class="d-flex justify-content-center m-5">
+                                <button *ngIf="!showPaypal" (click)="makepayment()" class="btn btn-success">Make Payment</button>
+                            </div>
+                            <!-- paypal -->
+                            <div *ngIf="showPaypal" class="m-1">
+                                <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">    
+            <img width="75%" height="400px" src="https://img.freepik.com/premium-vector/illustration-vector-graphic-cartoon-character-business-education_516790-522.jpg?w=360" alt="">
+            
+
+        </div>
+    </div>
+</div>
+
+<!-- part-2 -->
+<div class="mt-5">
+    <div class="row">
+        <div class="col-5 ms-5 ">
+            <img style="margin-left: 300px;" width="50%" height="500px" src="https://www.nactetindia.org/images/certificate.jpg" alt="">
+        </div>
+        <div class="col-6 ms-5 mt-5">
+            <img style="margin-top: 30px;" width="20%" src="https://png.pngtree.com/png-clipart/20220716/ourmid/pngtree-gold-ribbon-rosette-award-vector-png-image_5980957.png" class="course-badge">
+            <h3 class="mt-3 fw-bold mb-5 " style="text-decoration: underline; font-family: 'Instrument Serif', serif;">CERTIFICATION BY NATIONAL COUNCIL FOR TECHNOLOGY & TRAINING</h3>
+            <p >The Course is Certified by National Council for Technology & Training. NACTET certificates have got high credibility among employers in India and abroad especially in Middle East and other parts of the world. All certificates issued by NACTET can be attested by Ministry of External affairs-Govt. of India and by the embassies of almost all countries.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- part-3 -->
+<div class="mt-5 text-center ">
+    <h1 class="fw-bold"  style="color: green; font-size: 70px; font-family: 'Instrument Serif', serif; margin-top: 100px;">What You Will Learn</h1>
+    <h5 class="fw-bold mt-5" >SkillMentor -<span class="text-success fs-3">{{course.course_name}} </span></h5>
+    
+    <div class="row main-div mt-5 ">
+        <div class="col-4 mt-5">
+            <div class="card" style="margin-left: 150px;">
+                <div class="heading">
+                    <h5 class=" fw-bold mt-3" >Module - 1</h5>
+                </div>
+                <div class="content">
+                    <h4 class="fw-bold text-success mb-3  ">{{course.modules.module1.m1_name}}</h4>
+                    <p>{{course.modules.module1.m1_description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 mt-5">
+            <div class="card" style="margin-left: 100px;">
+                <div class="heading">
+                    <h5 class="fw-bold mt-3" >Module - 2</h5>
+                </div>
+                <div class="content ">
+                    <h4 class="fw-bold text-success mb-3  " >{{course.modules.module2.m2_name}}</h4>
+                    <p >{{course.modules.module2.m2_description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 mt-5">
+            <div class="card" style="margin-left: 50px;">
+                <div class="heading">
+                    <h5 class="fw-bold mt-3" >Module - 3</h5>
+                </div>
+                <div class="content">
+                    <h4 class="fw-bold text-success mb-3  ">{{course.modules.module3.m3_name}}</h4>
+                    <p>{{course.modules.module3.m3_description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

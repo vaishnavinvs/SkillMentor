@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+/* google font import */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Bungee+Inline&family=Bungee+Shade&family=Italianno&family=Monoton&family=Oswald&family=Qwigley&family=Roboto+Condensed:wght@300;700&family=Rubik+Vinyl&family=Rye&display=swap');
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+  } */

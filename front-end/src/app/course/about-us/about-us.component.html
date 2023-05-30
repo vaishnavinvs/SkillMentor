@@ -1,0 +1,67 @@
+
+
+
+<!-- part-1 -->
+<div class="mt-3" style="background-color: rgb(246, 248, 250); height: 500px;">
+    <div class="row" >
+        <div class="col-6 ">
+            <div class=" mt-5 " style="margin-left: 100px;">
+                <h1 class="fw-bold" style="color: green; font-family: 'Instrument Serif', serif;  margin-top: 75px; font-size: 50px;">SkillMentor</h1>
+                <h4 class="fw-bold mt-3" style="color: green;">No.1 Software Training Institute in Kochi,Kerala </h4>
+                <p class="mt-5 fw-bold fs-4" style="color: rgb(104, 104, 104);">Our professional trainers with years of industry experience helps you get trained &placed in emerging technologies like Big Data, Data Science, Machine Learning, Python.
+                </p>
+            </div>
+        </div>
+        <div class="col-6 ">    
+            <img style="margin-left: 100px; margin-top: 50px;" width="70%" height="400px" src="https://img.freepik.com/premium-vector/business-people-busy-preparing-team-project-outdoor-modern-cafe-setting_147064-144.jpg?w=2000" alt="">
+            
+
+        </div>
+    </div>
+</div>
+
+<!-- part-2 -->
+<div class="mt-5" style="height: 700px; background-color: rgb(252, 244, 234);">
+    <div class="row">
+        <div class="col-6">
+            <div style="margin-left: 150px;">
+                <h1 class="text-success fw-bold mb-3 " style="margin-top: 50px; font-size: 50px;">Provide Best Education Services For You</h1>
+                <h5 class="fw-bold mb-3">SkillMentor - ISO 9001:2015 Certified Institution - Software Training Institute.</h5>
+                <p>Providing advanced level Gen 4.0 software training to students, Luminar Technolab is an IT finishing school situated at Kakkanad, near Infopark Cochin & Mavoor Road Calicut. Luminar Technolab is affiliated to National Council for Technology and Training (NACTET). NACTET is an autonomous organisation registered under Govt of Kerala and Government of India NCT, New Delhi under Indian trust act.</p>
+                <p>Born out from a group IT professionals with more than 15 years of industry experience, Luminar Technolab offers best software training and placement in emerging technologies like Big Data Analytics, Machine Learning, Artificial Intelligence, Data Science, Automation Testing, Full Stack Development, Python, MEAN Stack, Digital Marketing, PHP, Angular, Power BI & Tableau.</p>
+                <p>Our mission is to provide 100% placements to students those who enrol for our specialised courses. The firm’s vision is to become the premium training centre that maximises value for customers by delivering high-quality training and placement services driven by intellect, innovation, and integrity in a fun and healthy environment.</p>
+            </div>        
+        </div>
+        <div class="col-6" >
+            <img style="margin-top: 120px;" width="100%" src="https://www.pngmart.com/files/About-Us-PNG-Photo.png" alt="">
+        </div>
+    </div>
+</div>
+
+
+<!-- part-3 -->
+<div class="row mt-5">
+    <div style="color: green; text-align: center;">
+        <h1 style="font-family: 'Italianno', cursive; font-size: 40px;">Check what people say about</h1>
+        <h1 class="fw-bold mt-3" style="font-family: 'Instrument Serif', serif;">SkillMentor</h1>
+    </div>
+    <div class="col container"  *ngFor="let review of allreviews">
+        <div class="card mb-2 mt-5"  >
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img style="height: 200px;  border-radius: 20%;" [src]="review.image"  class="img-fluid rounded-start p-3" alt="student_image">
+                <div class="mt-2 mb-3 ms-4">
+                    <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star-half-stroke "></i>
+                </div>
+            </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold mt-2 mb-3">{{review.name}}</h5>
+                  <h6 style="font-family: 'Instrument Serif', serif;">{{review.course}}</h6>
+                  <p class="mt-3">"{{review.review}}"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

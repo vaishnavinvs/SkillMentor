@@ -1,0 +1,14 @@
+.link{
+    color: green;
+    text-decoration: none;
+}
+
+.form-control{
+    height: 4rem;
+    width: 75%;
+}
+
+.form-select{
+    height: 4rem;
+    width: 75%;
+}

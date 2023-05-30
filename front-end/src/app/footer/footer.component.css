@@ -1,0 +1,14 @@
+.link{
+    text-decoration: none;
+    color: grey;
+    font-size: 17px;
+}
+
+.links{
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: green;
+}

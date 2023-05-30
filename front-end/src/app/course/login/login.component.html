@@ -1,0 +1,59 @@
+<nav  class="navbar navbar-expand-lg bg-body-transperant navbar-light ">
+  <div class="container mt-3">
+      <div class="col-8 " style="text-align: left; ">
+        <a class="navbar-brand  " routerLink="course/home"><img height="75px" width="300px" src="../assets/images/logo.jpg" alt="app"></a>
+      </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-7 mt-5 text-center">
+            <img  style="width:500px;" class="img-fluid" src="https://skill.samsodisha.gov.in/studentmanagement/img/diplomacart.png" alt="login">
+
+        </div>
+
+
+<div class="col-lg-5 mt-3">
+
+  <h1 class="fw-bold mt-5" style="color: green; font-family: 'Instrument Serif', serif;">Login </h1>
+
+
+<form  [formGroup]="loginForm" (ngSubmit)="login()" style="margin-top: 40px; " class="border p-4" >
+  <div class=" mb-3">
+    <input name="uname" formControlName="uname"  type="text" class="form-control"  placeholder="User Name">
+</div>
+<div *ngIf="this.loginForm.get('uname')?.errors && this.loginForm.get('uname')?.touched"
+        class="text-danger" style="margin-left: 20px;font-size: 13px;">Name is Required</div>
+
+<div class=" mb-3">
+  <input name="pswd" formControlName="pswd"  type="password" class="form-control"  placeholder="Password">
+
+</div>
+
+<div *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched"
+      class="text-danger" style="margin-left: 20px;font-size: 13px;">Password is Required</div>
+
+      <div class="text-danger mt-2 ms-4">
+        {{errorMsg}}
+       </div>
+
+<div class="mt-3">
+<button type="submit" class="btn btn-primary" >Log In</button>
+<br><br>
+<span >
+   New User? Click here to <a routerLink="register">Register</a>
+</span>
+
+
+</div>
+
+
+</form>
+
+</div>
+
+
+    </div>
+  </div>

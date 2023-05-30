@@ -1,0 +1,86 @@
+.card{
+    margin: 0 1rem 0 1rem;
+    position: relative;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(22, 22, 22, 0.5);
+    padding: 10px;
+    transition: .3s;
+    background-color: #e2fbe6;
+    cursor: pointer;
+}
+
+.card:hover{
+    height: 465px;
+    transition: .3s;
+    background-color: white;
+}
+
+.card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.heading{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.content{
+    transition: .3s;
+    transform: translateY(0px);
+    text-align: center;
+    opacity: 0;
+}
+
+.main-div{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.wrapper{
+    position: relative;
+}
+
+.wrapper input{
+    width: 450px;
+    height: 50px;
+    padding: 0 15px;
+    outline: none;
+    font-size: 19px;
+    color: rgb(6, 6, 6);
+    border-radius: 10px;
+    border: 2px dotted greenyellow;
+}
+
+.wrapper label{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: gray;
+    font-size: 20px;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.wrapper input:focus ~ label,
+.wrapper input:valid ~ label{
+    top: 0;
+    color: green;
+    background: #fff;
+    font-size: 25px;
+}
+
+.wrapper input:focus,
+.wrapper input:valid{
+    border: 1px solid green;
+}

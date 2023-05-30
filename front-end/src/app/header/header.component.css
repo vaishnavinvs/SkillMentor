@@ -1,0 +1,9 @@
+.item{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.item:hover{
+    color: green;
+    text-decoration: underline;
+}

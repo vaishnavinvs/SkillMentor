@@ -1,0 +1,108 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sp{
+    background-image: url('https://e7.pngegg.com/pngimages/534/960/png-clipart-euclidean-curve-spring-green-curve-background-white-and-green-wall-art-text-computer-wallpaper.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+.card-main {
+    height: 279px;
+    width: 22rem;
+    border-radius: 1rem;
+    position: relative;
+    transform-style: preserve-3d;
+    justify-content: center;
+    transition: all .4s ease;
+    /* align-items: center; */
+    margin: 1rem;
+}
+
+.card-main:hover {
+    transform: rotateY(180deg);
+}
+
+.front-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    background-image: linear-gradient(to top right, rgb(228, 4, 4), rgb(0, 212, 35));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.back-card {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: rgb(199, 254, 199);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+}
+
+.back-card .back-light{
+    color: black;
+    text-align: left;
+    margin-left: 10px;
+}
+
+
+.front-card img {
+    margin-bottom: 1.2rem;
+    width: 15%;
+}
+
+.front-card h6,h4 {
+    margin-top: 1rem;
+    color: white;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 1rem;
+
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.back-light {
+    color: #fff;
+}
+
